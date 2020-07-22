@@ -24,7 +24,8 @@ public class Student
 		//Pass the constructor variables into the private class variables
 		id = initId;
 		name = initName;
-		feesTotal = initFeesPaid;
+		feesPaid = initFeesPaid;
+		feesTotal = 30000;
 	}
 	
 
@@ -71,7 +72,7 @@ public class Student
     **/
 	public void setName(String newName)
 	{
-		//Set the class variable name based on the input varibale
+		//Set the class variable name based on the input variable
 		name = newName;
 	}
 
@@ -82,13 +83,20 @@ public class Student
     **/
 	public int getFeesPaid()
 	{
+		//Set the class variable feesPaid based on the input variable
 		return feesPaid;
 	}
 
 	/**
+	 * return the total fees of the student
+	 * 
      * @return the total fees of the student
     **/
-
+	public int getFeesTotal()
+	{
+		//Return the private class variable feesTotal
+		return feesTotal;
+	}
 
 
     /**
@@ -119,18 +127,24 @@ public class Student
      *
      * @param fees the fees that the student pays.
     **/
-
+	public void payfees(int fees)
+	{
+		//Add the fees paid to the feesPaid counter variable
+		feesPaid += fees;
+	}
 
     /**
      *
      * @return the remaining fees.
     **/
-
+	public int getRemainingFees()
+	{
+		return feesTotal - feesPaid;
+	}
 
     /**
      * Display method
     **/
-
     public String displayInfo()
     {
         return "Name of the Student: " + name +

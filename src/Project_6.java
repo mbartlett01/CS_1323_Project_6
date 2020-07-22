@@ -27,8 +27,8 @@ public class Project_6{
         Teacher chandler = new Teacher(10, "Chandler", 5000);
         ouGcoe.addTeacher(chandler);
 
-        student_1.payFees(8000);
-        student_3.payFees(9000);
+        student_1.payfees(8000);
+        student_3.payfees(9000);
 
         System.out.println("OU GCOE has earned $" + ouGcoe.getTotalMoneyEarned());
 

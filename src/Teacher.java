@@ -1,4 +1,9 @@
-
+/**
+ * This class can manage teachers in a school system and their salaries
+ * 
+ * @author Michael
+ * @version 1.0
+ */
 public class Teacher
 {
 
@@ -94,6 +99,7 @@ public class Teacher
 	public void receiveSalary(int salary)
 	{
 		salaryEarned += salary;
+		School.updateTotalMoneySpent(salary);
 	}
 
 

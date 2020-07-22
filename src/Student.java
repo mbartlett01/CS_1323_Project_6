@@ -1,5 +1,5 @@
 /**
- * A class that can manage students in a school and their fees
+ * This class can manage students in a school system and their fees
  * 
  * @author Michael
  * @version 1.0
@@ -19,12 +19,12 @@ public class Student
     /**
      * Write the constructor as given in the UML
     **/
-	public Student(int initId, String initName, int initFeesPaid)
+	public Student(int id, String name, int feesPaid)
 	{
 		//Pass the constructor variables into the private class variables
-		id = initId;
-		name = initName;
-		feesPaid = initFeesPaid;
+		this.id = id;
+		this.name = name;
+		this.feesPaid = feesPaid;
 		feesTotal = 30000;
 	}
 	
@@ -131,6 +131,7 @@ public class Student
 	{
 		//Add the fees paid to the feesPaid counter variable
 		feesPaid += fees;
+		School.updateTotalMoneyEarned(fees);
 	}
 
     /**

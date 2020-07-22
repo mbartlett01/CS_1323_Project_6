@@ -1,40 +1,89 @@
-
-public class Student{
+/**
+ * A class that can manage students in a school and their fees
+ * 
+ * @author Michael
+ * @version 1.0
+ */
+public class Student
+{
 
     /**
      * Declare all the variables as mentioned in the UML
     **/
-	
+	private int id;
+	private String name;
+	private int feesPaid;
+	private int feesTotal;
+	private char grade;
 
     /**
      * Write the constructor as given in the UML
     **/
+	public Student(int initId, String initName, int initFeesPaid)
+	{
+		//Pass the constructor variables into the private class variables
+		id = initId;
+		name = initName;
+		feesTotal = initFeesPaid;
+	}
+	
 
     /**
      * return the number of id of the student
+     * 
+     * @return the id of the student
     **/
+	public int getId()
+	{
+		//Return the private class variable id
+		return id;
+	}
 
 
     /**
      * add a student's id to the school
+     * 
+     * @param newId the new id of the student
     **/
-
+	public void setId(int newId)
+	{
+		//Set the class variable based on the input variable
+		id = newId;
+	}
 
 
     /**
      * return the name of the student in the school
+     * 
+     * @return the name of the student
     **/
+	public String getName()
+	{
+		//Return the private class variable name
+		return name;
+	}
 
 
     /**
      * add the student name to the school
+     * 
+     * @param newName the new name of the student
     **/
-
+	public void setName(String newName)
+	{
+		//Set the class variable name based on the input varibale
+		name = newName;
+	}
 
     /**
+     * return the fees paid by the student
+     * 
      * @return the fees paid by the student
     **/
-
+	public int getFeesPaid()
+	{
+		return feesPaid;
+	}
 
 	/**
      * @return the total fees of the student
@@ -46,13 +95,22 @@ public class Student{
      *
      * @return the grade of the student.
     **/
+	public char getGrade()
+	{
+		//Return the private class variable grade
+		return grade;
+	}
 
-
+	
     /**
      * Used to update the student's grade.
-     * @param grade new grade of the student.
+     * @param newGrade new grade of the student.
     **/
-
+	public void setGrade(char newGrade)
+	{
+		//Set the class variable based on the input variable
+		grade = newGrade;
+	}
 
     /**
      * Keep adding the fees to feesPaid Field.
@@ -73,7 +131,8 @@ public class Student{
      * Display method
     **/
 
-    public String displayInfo(){
+    public String displayInfo()
+    {
         return "Name of the Student: " + name +
                 " Remaining fees to be paid: $" + getRemainingFees();
     }
